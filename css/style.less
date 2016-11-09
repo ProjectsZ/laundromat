@@ -1,0 +1,166 @@
+@c-default: #9885BF;
+@c-deep-purple: #EDE7F6;
+@c-deep-purple-2: #D1C4E9;
+@c-deep-purple-A200: #E040FB;
+
+html{
+    overflow-y: hidden;
+    background: #FCFCFC;
+}
+
+#map-canvas {
+    margin: 0px;
+    width: 100;
+    height: 100%;
+}
+
+.color-default{ color: #9885BF !important; }
+.bg-default{ background-color: #9885BF !important; }
+
+.deep-purple {  background-color: #673ab7 !important; }
+.deep-purple-txt {  color: #673ab7 !important; }
+
+.white {  background-color: #FFFFFF !important; }
+
+
+/* Foto (A 100x100 picture of the manager) */
+.ft{
+    width: 100px; height: 100px;
+    border: 5px solid @c-default;
+    border-radius: 50%;
+    float: left;
+    margin-left: -5px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.ft:hover{
+    border: 5px solid @c-deep-purple-A200;
+}
+
+.titulo:hover{
+    color: #673ab7;
+}
+
+h6{
+    padding: 10px;
+}
+/*Social Red*/
+.social li{
+    margin: 0px;
+    display: inline-block;
+    position: relative;
+}
+
+.facebook{ color: #3b5998; }
+.twitter{ color: #54ABEE; }
+.google{ color: #d34836; }
+.whatsapp{ color: #25D366; }
+
+
+/* TAB */
+.cuerpo{
+        margin-top: -30px;
+}
+.valor{
+    overflow-x: hidden;
+}
+.tab .active{
+    border-bottom: 5px solid @c-default;
+}
+.tab:hover{
+    background: @c-deep-purple-2;
+}
+
+.btn-schedule-pickup{
+    background: white;
+    border: 3px solid @c-default;
+    color: @c-default;
+    
+}
+
+.btn-schedule-pickup:hover{
+        background: @c-default;
+        color: @c-deep-purple;
+}
+
+.texto{
+    color: @c-deep-purple;
+    margin: 0px;
+    margin-top: -180px;
+}
+
+.hours{
+    background: @c-default;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.hours p{
+    margin: 0px;
+    color: @c-deep-purple-2;
+}
+
+.hours:hover{
+    background: @c-deep-purple-A200;
+}
+
+
+
+
+
+
+
+
+
+
+/*********************
+  Media Query Classes
+**********************/
+@media only screen and (max-width: 600px) {
+    .telefono{
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          background: #FFFF00;
+          bottom: 10px;
+          right: 30px;
+          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+          position: fixed;
+          right: 23px;
+          bottom: 23px;
+          padding-top: 15px;
+          margin-bottom: 0;
+          z-index: 998;
+          background-image: url(../img/ic_local_phone_black_36px.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+    }
+    
+    .btn-schedule-pickup{
+        font-size: 10px;
+    }
+    .texto{
+        margin: 0px;
+    }
+}
+@media only screen and  (min-width: 601px) and (max-width: 768px){
+    .texto{
+    margin-top: -108px;
+    }
+}
+@media only screen and (min-width: 601px){
+
+    .telefono:before{
+        content: "(222) 666-5555";
+        font-size: 2rem;
+    }
+    
+    .telefono{
+        float: left; margin-right: 12px;
+    }
+    .valor{
+        overflow-x: hidden;
+    }
+    #map-canvas{
+        height: 70%;
+    }
+    
+}
